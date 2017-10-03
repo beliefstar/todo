@@ -17,7 +17,7 @@
       </ul>
     </div>
 
-    <footer>
+    <footer v-show="todos.length">
       <div class="count"> {{activeCount}} 条未完成</div>
       <div class="buttons">
         <router-link to="/all" class="btn">所有</router-link>
