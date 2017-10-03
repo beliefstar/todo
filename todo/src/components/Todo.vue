@@ -86,7 +86,6 @@
           completed: false
         })
         this.newTodo = ''
-        TodoStor.update(this.todolist)
       },
       destroy (_id) {
         this.todos = this.todos.filter(v => {
