@@ -1,0 +1,22 @@
+<app-add (slidelist)="changetodoes($event)"></app-add>
+<div class="banner">
+  显示已完成：
+  <div class="switch-wrapper" [ngClass]="{'active':flag}" (click)="switchBtn()">
+    <div class="switch-btn"></div>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let v of todoes; let i = index" class="todo-content-item" (click)="operation(v.id)">
+    <div class="icon icon-waiting" [ngClass]="{'icon-finish':v.flag==1}"></div>
+    <div class="content">{{v.content}}</div>
+  </li>
+</ul>
+<div class="black-bg" *ngIf="modal" (click)="modal=false">
+  <div class="modal-wall">
+    <div class="modal-wrapper">
+      <button (click)="delete(itemID)" class="btn btn-block btn-danger">删除</button>
+      <button (click)="finish(itemID)" class="btn btn-block btn-primary">完成</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+    <h1>todos</h1>
+    <div class="content">
+        <div class="form">
+            <input type="text" placeholder="新的todo" id="new-text">
+        </div>
+        <div class="center-main">
+            <input type="checkbox" class="finish-all">
+            <ul class="todo-list">
+                <!--<li>-->
+                    <!--<input type="checkbox" class="finish">-->
+                    <!--<label>content</label>-->
+                    <!--<button class="delete">&times;</button>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <footer>
+            <div class="count"> <span id="total"></span> 条未完成</div>
+            <div class="buttons">
+                <a href="#/all" class="btn active">所有</a>
+                <a href="#/active" class="btn">未完成</a>
+                <a href="#/completed" class="btn">已完成</a>
+            </div>
+            <button class="btn clear-finish">清除已完成</button>
+        </footer>
+    </div>
+</div>
+
+
+
+<script src="./lib/jquery-1.12.4.js"></script>
+<script src="./js/router.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
